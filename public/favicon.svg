@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <clipPath id="leftHalf">
+      <rect x="0" y="0" width="32" height="64" />
+    </clipPath>
+    <clipPath id="rightHalf">
+      <rect x="32" y="0" width="32" height="64" />
+    </clipPath>
+  </defs>
+
+  <!-- Left Half: White/Cyan -->
+  <g clip-path="url(#leftHalf)">
+    <path d="M12 24C12 17 18 12 32 12C46 12 52 17 52 24C52 38 42 50 32 54C22 50 12 38 12 24Z" fill="#F8FAFC" />
+    <!-- Left eye (happy arc) -->
+    <path d="M20 25C21 21 27 21 28 25" stroke="#0B0E1A" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    <!-- Left mouth half -->
+    <path d="M26 40C28 42 30 43 32 43" stroke="#0B0E1A" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Right Half: Vibrant Pink/Red -->
+  <g clip-path="url(#rightHalf)">
+    <path d="M12 24C12 17 18 12 32 12C46 12 52 17 52 24C52 38 42 50 32 54C22 50 12 38 12 24Z" fill="#F43F5E" />
+    <!-- Right eye (happy arc) -->
+    <path d="M36 25C37 21 43 21 44 25" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    <!-- Right mouth half -->
+    <path d="M32 43C34 43 36 42 38 40" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+</svg>

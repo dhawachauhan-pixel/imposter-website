@@ -1,0 +1,108 @@
+.player-list-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .player-list-box {
+    gap: var(--space-sm);
+  }
+}
+
+.player-rows-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .player-rows-stack {
+    gap: 10px;
+  }
+}
+
+.player-actions-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.add-player-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  padding: 8px 14px;
+  min-height: 38px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .add-player-action-btn {
+    padding: 11px 16px;
+    min-height: 44px;
+    font-size: 0.92rem;
+  }
+}
+
+.add-player-action-btn:hover:not(:disabled) {
+  background: var(--bg-input-focus);
+  border-color: var(--primary);
+  color: #ffffff;
+  box-shadow: 0 0 12px var(--primary-soft);
+}
+
+.add-player-action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.reset-names-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  min-height: 38px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.reset-names-action-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #f87171;
+}
+
+@media (min-width: 768px) {
+  .reset-names-action-btn {
+    padding: 11px 14px;
+    min-height: 44px;
+    font-size: 0.84rem;
+  }
+}
+
+.add-player-icon {
+  display: flex;
+  align-items: center;
+}

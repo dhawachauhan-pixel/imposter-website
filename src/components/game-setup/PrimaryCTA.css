@@ -1,0 +1,117 @@
+.cta-action-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+@media (min-width: 768px) {
+  .cta-action-area {
+    gap: var(--space-xs);
+    margin-top: var(--space-xs);
+  }
+}
+
+.start-button-main {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 20px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  background: var(--cta-gradient);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-md);
+  box-shadow: var(--cta-glow);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .start-button-main {
+    min-height: 56px;
+    padding: 16px 28px;
+    font-size: 1.25rem;
+    border-radius: var(--radius-lg);
+    gap: 12px;
+  }
+}
+
+.start-button-main:hover:not(:disabled) {
+  background: var(--cta-gradient-hover);
+  box-shadow: 0 12px 36px rgba(244, 63, 94, 0.45);
+  transform: translateY(-2px);
+}
+
+.start-button-main:active:not(:disabled) {
+  transform: translateY(1px) scale(0.99);
+}
+
+.start-button-main:disabled {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-dim);
+  border-color: var(--border-subtle);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.start-button-icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .start-button-icon {
+    font-size: 1.15rem;
+  }
+}
+
+/* Microcopy below button */
+.cta-microcopy {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-align: center;
+  user-select: none;
+  margin-top: 2px;
+}
+
+@media (min-width: 768px) {
+  .cta-microcopy {
+    font-size: 0.82rem;
+    margin-top: 0;
+  }
+}
+
+.microcopy-extra {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .microcopy-extra {
+    display: inline;
+  }
+}
+
+.cta-validation-error-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fca5a5;
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+}

@@ -1,0 +1,203 @@
+.role-reveal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 420px;
+  justify-content: space-between;
+}
+
+.reveal-progress-tracker {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: var(--space-md);
+}
+
+.reveal-pass-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  animation: revealFadeIn 0.25s ease-out;
+}
+
+@keyframes revealFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pass-avatar-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: var(--space-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.15);
+}
+
+.pass-headline {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.pass-player-name {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 16px var(--accent-cyan-glow);
+}
+
+.pass-instruction {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+.pass-privacy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  border-radius: var(--radius-full);
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  color: var(--primary-light);
+  margin-bottom: var(--space-xl);
+}
+
+/* Revealed Secret Card */
+.secret-role-card {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-md);
+  margin-bottom: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-card);
+  animation: cardFlipIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes cardFlipIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.secret-role-card.civilian {
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.12) 0%, rgba(15, 20, 42, 0.92) 100%);
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 12px 36px rgba(56, 189, 248, 0.15);
+}
+
+.secret-role-card.imposter {
+  background: linear-gradient(180deg, rgba(244, 63, 94, 0.16) 0%, rgba(15, 20, 42, 0.92) 100%);
+  border-color: rgba(244, 63, 94, 0.45);
+  box-shadow: 0 12px 36px rgba(244, 63, 94, 0.22);
+}
+
+.secret-role-card.mr_white {
+  background: linear-gradient(180deg, rgba(241, 245, 249, 0.16) 0%, rgba(15, 20, 42, 0.95) 100%);
+  border-color: rgba(241, 245, 249, 0.45);
+  box-shadow: 0 12px 36px rgba(255, 255, 255, 0.15);
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
+}
+
+.role-badge.civilian {
+  background: var(--accent-cyan-soft);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.role-badge.imposter {
+  background: var(--color-imposter-soft);
+  color: var(--color-imposter);
+  border: 1px solid rgba(244, 63, 94, 0.45);
+}
+
+.role-badge.mr_white {
+  background: rgba(241, 245, 249, 0.18);
+  color: #f8fafc;
+  border: 1px solid rgba(241, 245, 249, 0.45);
+}
+
+.word-reveal-group {
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.word-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.revealed-secret-word {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+}
+
+.imposter-word-placeholder {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-imposter);
+  margin: var(--space-sm) 0;
+}
+
+.role-instruction-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.reveal-actions-wrapper {
+  width: 100%;
+}

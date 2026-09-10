@@ -1,0 +1,133 @@
+.mr-white-guess-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-md) var(--space-xs);
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 440px;
+  justify-content: space-between;
+  animation: mrWhiteFadeIn 0.3s ease-out;
+}
+
+@keyframes mrWhiteFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mr-white-badge-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: var(--space-md);
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.4);
+  border: 3px solid #ffffff;
+}
+
+.mr-white-pass-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.mr-white-player-name {
+  color: #f1f5f9;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.6);
+}
+
+.mr-white-pass-instruction {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 340px;
+  line-height: 1.5;
+}
+
+/* Guess Card */
+.mr-white-guess-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mr-white-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.mr-white-guess-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.mr-white-guess-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 360px;
+}
+
+.mr-white-input-wrapper {
+  width: 100%;
+  margin-bottom: var(--space-md);
+}
+
+.mr-white-guess-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1.15rem;
+  font-family: var(--font-sans);
+  background: var(--bg-input);
+  border: 2px solid var(--border-input);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  text-align: center;
+  transition: all var(--transition-fast);
+  outline: none;
+}
+
+.mr-white-guess-input:focus {
+  border-color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
+  background: var(--bg-input-focus);
+}
+
+.mr-white-validation-msg {
+  color: var(--accent-pink);
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.mr-white-action-wrapper {
+  width: 100%;
+}
