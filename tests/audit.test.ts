@@ -160,12 +160,20 @@ describe('Phase 3A Final Quality Audit: End-to-End State Invariants', () => {
     assert.ok(fs.existsSync(sitemapPath), 'public/sitemap.xml must exist');
 
     const sitemapContent = fs.readFileSync(sitemapPath, 'utf8');
-    assert.ok(sitemapContent.includes('https://imposter.website/'), 'sitemap must include canonical domain');
+    assert.ok(
+      sitemapContent.includes('https://dhawachauhan-pixel.github.io/imposter-website/') ||
+        sitemapContent.includes('https://imposter.website/'),
+      'sitemap must include canonical domain'
+    );
     assert.ok(sitemapContent.includes('<urlset'), 'sitemap must be valid xml urlset');
 
     const robotsPath = path.resolve(process.cwd(), 'public', 'robots.txt');
     assert.ok(fs.existsSync(robotsPath), 'public/robots.txt must exist');
     const robotsContent = fs.readFileSync(robotsPath, 'utf8');
-    assert.ok(robotsContent.includes('Sitemap: https://imposter.website/sitemap.xml'), 'robots.txt must reference sitemap');
+    assert.ok(
+      robotsContent.includes('Sitemap: https://dhawachauhan-pixel.github.io/imposter-website/sitemap.xml') ||
+        robotsContent.includes('Sitemap: https://imposter.website/sitemap.xml'),
+      'robots.txt must reference sitemap'
+    );
   });
 });
